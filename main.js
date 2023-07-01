@@ -58,7 +58,7 @@ const subject = () => {
     return phrase;
 }
 
-const event = () => {
+const forecast = () => {
     var num = Math.floor(Math.random()*5);
     var phrase;
 
@@ -70,8 +70,21 @@ const event = () => {
             phrase = 'will struggle socially ';
             break;
         case 2:
-            phrase = 'will '
+            phrase = 'will be gifted a lump sum of money ';
+            break;
+        case 3:
+            phrase = 'will be hired in a new and favorable position ';
+            break;
+        case 4:
+            phrase = 'will be asked to make a tough decision ';
+            break;
+        default:
+            return;
     }
+
+    return phrase;
 }
 
-// console.log(subject());
+const producePhrase = () => subject() + forecast() + day();
+
+console.log(producePhrase());
